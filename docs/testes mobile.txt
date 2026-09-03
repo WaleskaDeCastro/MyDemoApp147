@@ -1,0 +1,42 @@
+Teste Mobile
+
+Existem vários tipos de aplicativos (apps)
+- Celulares/Smartphone: Android / Iphone
+- Tablets: Android / Iphone
+- SmartTV
+- Weareble(vestiveis): smartband (pulseira), smartwatches (relógio), smartglasses (oculos)
+- Eletro/Eletronicos
+- Sistema de mídia de automóvel 
+
+Pré-requisitos
+Cenário 1 - Testes Locais
+- SDK (Kit de comunicação/desenvolvimento) --> existe um para cada versão do SO (Android)
+- Emulador --> Android Studio
+- Appium Service/Server/Desktop
+
+Cenário 2 - Teste Remoto
+- Conta em um serviço (Saucelabs, Browserstack, Perfecto, outros)
+
+Comuns aos 2 cenários:
+- APK do app alvo (instalador do aplicativo que queremos testar)
+- APK Infor (descobrir appPackage e o appActivity)
+- Appium Inspector
+
+Maquina Ideal
+- Processador I5, I7 ou I9, ou equivalente AMD - Familias 12 em diante
+- GPU (Placa de Vídeo) não ter um placa de vídeo offline
+- Memória RAM: 16 GB, 32 GB ou mais
+- Disco: SSD pelo 512 Gbou 1Tb
+
+Importante:
+- Um computador/notebook Intel/AMD pode rodar emuladores Android (somente)
+- Um camputador/notebook Mac/Apple pode rodar emuladores Android e IOS
+
+Executar testes, tanto no local ou no remoto:
+- emuladores
+- aparelhos físicos 
+
+Através dp APK Info, vamos descobrir 2 informações sobre o App alvo:
+- appPackage: com.saucelabs.mydemoapp.android
+- appActivity:com.saucelabs.mydemoapp.android.view.activities.SplashActivity
+
