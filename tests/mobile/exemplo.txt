@@ -1,0 +1,38 @@
+// This sample code supports WebdriverIO client >=9.7.0
+// (npm i --save webdriverio)
+// Then paste this into a .js or .ts file and run with Node
+// (modern Node can run TypeScript files directly if types are strippable):
+// node <file>.js
+// or: node <file>.ts
+
+import {remote} from 'webdriverio';
+async function main () {
+  const caps = {
+  "platformName": "Android",
+  "appium:platformVersion": "16.0",
+  "appium:deviceName": "emulator5554",
+  "appium:deviceOrientation": "portrait",
+  "appium:appPackage": "com.saucelabs.mydemoapp.android",
+  "appium:appActivity": "com.saucelabs.mydemoapp.android.view.activities.SplashActivity",
+  "appium:automationName": "UiAutomator2",
+  "appium:ensureWebviewsHavePages:": "true",
+  "appium:ensureWebviewsHavePages": true,
+  "appium:nativeWebScreenshot": true,
+  "appium:newCommandTimeout": 3600,
+  "appium:connectHardwareKeyboard": true
+}
+  const driver = await remote({
+    protocol: "http",
+    hostname: "127.0.0.1",
+    port: 4723,
+    path: "/",
+    capabilities: caps
+  });
+  const el1 = await driver.$("class name:android.widget.Button");
+  await el1.click();
+  const el2 = await driver.$("accessibility id:Home");
+  await el2.click();
+  await driver.deleteSession();
+}
+
+main().catch(console.log);

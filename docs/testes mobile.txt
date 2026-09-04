@@ -40,3 +40,8 @@ Através dp APK Info, vamos descobrir 2 informações sobre o App alvo:
 - appPackage: com.saucelabs.mydemoapp.android
 - appActivity:com.saucelabs.mydemoapp.android.view.activities.SplashActivity
 
+Tipos de Apps:
+- Nativo: criado especificamente para um sistema operacional
+- Hibrido: são gerados dois apps a partir do mesmo código
+- PWA/WebDav: site disfarçado de app
+
