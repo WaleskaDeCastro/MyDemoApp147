@@ -4,9 +4,9 @@ Funcionalidade: Comprar Produto
     Dado que abro o MyDemoApp
     Quando seleciono o produto na "<posicao>"
     Entao exibe a pagina de detalhe com o "<nomeProduto>" 
-    E o preco "<preco_produto>"
+    E o "<preco_produto>"
 
     Exemplos:
-        | posicao | nome_produto              | preco_produto |
-        | 0       | Sauce Labs Backpack       | $29.99        |
-        | 3       | Sauce Labs Backpack (red) | $29.99        |     
+        | posicao | nome_produto              | preco_produto  |
+        | 0       | Sauce Labs Backpack       | $ 29.99        |
+        | 3       | Sauce Labs Backpack (red) | $ 29.99        |     
