@@ -10,8 +10,9 @@ async function main() {
   const caps = {
     platformName: "Android",
     "appium:platformVersion": "16.0",
-    "appium:deviceName": "emulator5554",
+    "appium:deviceName": "Google Pixel 6 Emulator",
     "appium:deviceOrientation": "portrait",
+    "appium:app": "storage:filename=mda-2.2.0-25.apk",
     "appium:appPackage": "com.saucelabs.mydemoapp.android",
     "appium:appActivity":
       "com.saucelabs.mydemoapp.android.view.activities.SplashActivity",
@@ -25,10 +26,12 @@ async function main() {
     unhandledPromptBehavior: "ignore",
   };
   const driver = await remote({
-    protocol: "http",
-    hostname: "127.0.0.1",
-    port: 4723,
-    path: "/",
+    user: process.env.SAUCE_USER,
+    key: process.env.SAUCE_KEY,
+    protocol: "https",
+    hostname: "ondemand.us-west-1.saucelabs.com",
+    port: 443,
+    baseUrl: "wd/hub",
     capabilities: caps,
   });
 
@@ -50,7 +53,7 @@ async function main() {
   const lbl_preco_produto = await driver.$(
     "id:com.saucelabs.mydemoapp.android:id/priceTV",
   );
-  await expect(await lbl_preco_produto.getText()).toEqual("$29.99"); // transformar em uma validação
+  await expect(await lbl_preco_produto.getText()).toEqual("$ 29.99"); // transformar em uma validação
   await driver.deleteSession();
 }
 
