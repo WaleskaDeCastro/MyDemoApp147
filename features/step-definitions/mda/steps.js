@@ -41,5 +41,4 @@ Then("o {string}", async (preco_produto) => {
         "id:com.saucelabs.mydemoapp.android:id/priceTV",
     );
     await expect(await lbl_preco_produto.getText()).toEqual(preco_produto); // transformar em uma validação
-    await driver.terminateApp("com.saucelabs.mydemoapp.android");
 });

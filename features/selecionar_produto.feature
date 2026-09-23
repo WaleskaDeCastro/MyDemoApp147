@@ -3,7 +3,7 @@ Funcionalidade: Comprar Produto
   Esquema do Cenario: Comprar Produto com Sucesso
     Dado que abro o MyDemoApp
     Quando seleciono o produto na "<posicao>"
-    Entao exibe a pagina de detalhe com o "<nomeProduto>" 
+    Entao exibe a pagina de detalhe com o "<nome_produto>" 
     E o "<preco_produto>"
 
     Exemplos:
